@@ -1,0 +1,7 @@
+{
+  "name": "juned",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
