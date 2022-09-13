@@ -1,6 +1,9 @@
 # Ionic starter with login and registration
 
-Ionic app started template, can be used for both Android & IOS come with three pages login, signup & forget password, easily customisable 
+Ionic app started template, can be used for both Android & IOS come with three pages login, signup & forget password, easily customisable
+
+<strong>Ionic Version : 6</strong> <br><br>
+<strong>Angular Version : 14</strong>
 
 | Login| Forget Password  | Register|
 | --- | --- | --- |
