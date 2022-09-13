@@ -16,7 +16,7 @@
     padding-left: 20px;
     width: 100%;
     border-radius: 12px;
-    border: 2px solid #F4F5F8;
+    border: 2px solid #e2e2e2;
     height: 70px;
     ion-input{
         margin-top: -13px;
@@ -56,6 +56,7 @@
         color: var(--ion-color-primary);
     }
     padding-right: 20px;
+    margin-top: -10px;
     text-align: end;
 }
 ion-footer {
