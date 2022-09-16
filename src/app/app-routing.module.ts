@@ -4,8 +4,12 @@ import { AuthComponentComponent } from './auth-component/auth-component.componen
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: '',
+    component: AuthComponentComponent
   },
   {
     path: 'auth',

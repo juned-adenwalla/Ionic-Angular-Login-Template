@@ -4,49 +4,53 @@
   <div class="container"  *ngIf="screen == 'signin'">
     <h1 class="heading">👋 Welcome<br><br></h1>
     <p class="para">Sign in to continue!</p>
-    <ion-item lines="none" class="ion-item">
-      <fieldset  class="input-item">
-        <legend>Email Id</legend> 
-        <ion-input type="email" placeholder="name@domain.com"></ion-input>
-      </fieldset>
-    </ion-item>
-    <ion-item lines="none" class="ion-item">
-      <fieldset class="input-item">
-        <legend>Password</legend> 
-        <ion-input type="password" placeholder="*******"></ion-input>
-      </fieldset>
-    </ion-item>
-    <p class="forget-text"><a (click)="change('forget')">Forgot Password?</a></p>
-    <p class="signup-text">I'm a new user&nbsp;<a (click)="change('signup')">Sign Up?</a></p>
-    <ion-button class="login-button" expand="block">Login</ion-button>
-    <ion-button class="google-button" expand="block" color="light"><ion-icon name="logo-google"></ion-icon>&nbsp;&nbsp;Google Signin</ion-button>
+    <form [formGroup]="formData">
+      <ion-item lines="none" class="ion-item">
+        <fieldset  class="input-item">
+          <legend>Email Id</legend> 
+          <ion-input formControlName="email" type="email" placeholder="name@domain.com"></ion-input>
+        </fieldset>
+      </ion-item>
+      <ion-item lines="none" class="ion-item">
+        <fieldset class="input-item">
+          <legend>Password</legend> 
+          <ion-input formControlName="password" type="password" placeholder="*******"></ion-input>
+        </fieldset>
+      </ion-item>
+      <p class="forget-text"><a (click)="change('forget')">Forgot Password?</a></p>
+      <p class="signup-text">I'm a new user&nbsp;<a (click)="change('signup')">Sign Up?</a></p>
+      <ion-button class="login-button" (click)="login()" expand="block">Login</ion-button>
+      <ion-button class="google-button" expand="block" color="light"><ion-icon name="logo-google"></ion-icon>&nbsp;&nbsp;Google Signin</ion-button>
+    </form>
   </div>
 
   <!-- Sign up page -->
   <div class="container"  *ngIf="screen == 'signup'">
     <h1 class="heading">🚀 Create Account<br><br></h1>
     <p class="para">Sign up to get started!</p>
-    <ion-item lines="none" class="ion-item">
-      <fieldset  class="input-item">
-        <legend>Full Name</legend> 
-        <ion-input type="text" placeholder="John Doe"></ion-input>
-      </fieldset>
-    </ion-item>
-    <ion-item lines="none" class="ion-item">
-      <fieldset  class="input-item">
-        <legend>Email Id</legend> 
-        <ion-input type="email" placeholder="john@doe.com"></ion-input>
-      </fieldset>
-    </ion-item>
-    <ion-item lines="none" class="ion-item">
-      <fieldset class="input-item">
-        <legend>Password</legend> 
-        <ion-input type="password" placeholder="*******"></ion-input>
-      </fieldset>
-    </ion-item>
-    <p class="signup-text">I'm already a member&nbsp;<a (click)="change('signin')">Sign In?</a></p>
-    <ion-button class="login-button" expand="block">Sign Up</ion-button>
-    <ion-button class="google-button" expand="block" color="light"><ion-icon name="logo-google"></ion-icon>&nbsp;&nbsp;Google Signin</ion-button>
+    <form [formGroup]="formData">
+      <ion-item lines="none" class="ion-item">
+        <fieldset  class="input-item">
+          <legend>Full Name</legend> 
+          <ion-input formControlName="name" type="text" placeholder="John Doe"></ion-input>
+        </fieldset>
+      </ion-item>
+      <ion-item lines="none" class="ion-item">
+        <fieldset  class="input-item">
+          <legend>Email Id</legend> 
+          <ion-input formControlName="email" type="email" placeholder="john@doe.com"></ion-input>
+        </fieldset>
+      </ion-item>
+      <ion-item lines="none" class="ion-item">
+        <fieldset class="input-item">
+          <legend>Password</legend> 
+          <ion-input formControlName="password" type="password" placeholder="*******"></ion-input>
+        </fieldset>
+      </ion-item>
+      <p class="signup-text">I'm already a member&nbsp;<a (click)="change('signin')">Sign In?</a></p>
+      <ion-button class="login-button" (click)="register()" expand="block">Sign Up</ion-button>
+      <ion-button class="google-button" expand="block" color="light"><ion-icon name="logo-google"></ion-icon>&nbsp;&nbsp;Google Signin</ion-button>
+    </form>
   </div>
 
   <!-- Forget password page -->
